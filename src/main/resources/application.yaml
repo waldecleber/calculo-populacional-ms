@@ -1,0 +1,30 @@
+server:
+  port: 7001
+  
+spring:
+  datasource:
+    url: '@URL@'
+    username: '@dataSource.project.user@'
+    password: '@dataSource.project.password@'
+    driver-class-name: '@dataSource.project.driverClass@'
+    
+  jpa:
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+        ddl-auto: create-drop          
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+
+liquibase:
+  change-log:
+    classpath: db/changelog-master.yaml
+
+info:
+  app:
+    name: Calculo Populacional API
+    description: API utilizada para calculo populacional baseado na cotação do dolar.
+    version: 0.0.1
+
+

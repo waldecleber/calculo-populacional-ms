@@ -1,0 +1,24 @@
+databaseChangeLog:    
+  - changeSet:
+      id: create-table-estado-sql
+      context: dev
+      author: waldecleber
+      changes:
+        - sqlFile:
+              encoding: utf8
+              path: sql/create_table_estado.sql
+              relativeToChangelogFile: true
+              splitStatements: true
+              stripComments: true   
+              
+  - changeSet:
+      id: create-table-cidade-sql
+      context: dev
+      author: waldecleber
+      changes:
+        - sqlFile:
+              encoding: utf8
+              path: sql/create_table_cidade.sql
+              relativeToChangelogFile: true
+              splitStatements: true
+              stripComments: true       
