@@ -34,11 +34,20 @@
             </properties>
         </profile>
         <profile>
-            <id>prod</id>
+            <id>dev</id>
             <properties>
                 <URL>jdbc:mysql://mysqldb:3306/populacao?createDatabaseIfNotExist=true</URL>
             </properties>
         </profile>
+		<profile>
+			<id>prod</id>
+			<properties>
+				<URL>jdbc:mysql://b644678a1a84c0:8fddb4c9@us-cdbr-east-02.cleardb.com/heroku_39d12a7c291e325?reconnect=true</URL>
+				<dataSource.project.user>b644678a1a84c0</dataSource.project.user>
+				<dataSource.project.password>8fddb4c9</dataSource.project.password>
+			</properties>
+		</profile>
+
     </profiles>
 
 	<dependencies>
