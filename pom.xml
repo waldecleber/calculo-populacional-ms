@@ -36,22 +36,10 @@
         <profile>
             <id>prod</id>
             <properties>
-                <URL>jdbc:mysql://localhost:3306/populacao?createDatabaseIfNotExist=true</URL>
+                <URL>jdbc:mysql://mysqldb:3306/populacao?createDatabaseIfNotExist=true</URL>
             </properties>
         </profile>
     </profiles>
-
-<!--	<dependencyManagement>-->
-<!--		<dependencies>-->
-<!--			<dependency>-->
-<!--				<groupId>org.springframework.cloud</groupId>-->
-<!--				<artifactId>spring-cloud-dependencies</artifactId>-->
-<!--				<version>Dalston.SR1</version>-->
-<!--				<type>pom</type>-->
-<!--				<scope>import</scope>-->
-<!--			</dependency>-->
-<!--		</dependencies>-->
-<!--	</dependencyManagement>-->
 
 	<dependencies>
 		<dependency>
@@ -158,25 +146,6 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-<!--		<plugins>-->
-<!--			<plugin>-->
-<!--				<groupId>org.liquibase</groupId>-->
-<!--				<artifactId>liquibase-maven-plugin</artifactId>-->
-<!--				<version>3.8.0</version>-->
-<!--				<configuration>-->
-<!--					<propertyFile>target/classes/liquibase.properties</propertyFile>-->
-<!--					<propertyFileWillOverride>true</propertyFileWillOverride>-->
-<!--				</configuration>-->
-<!--				<executions>-->
-<!--					<execution>-->
-<!--						<phase>process-resources</phase>-->
-<!--						<goals>-->
-<!--							<goal>update</goal>-->
-<!--						</goals>-->
-<!--					</execution>-->
-<!--				</executions>-->
-<!--			</plugin>-->
-<!--		</plugins>-->
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>
@@ -184,17 +153,4 @@
 			</resource>
 		</resources>
 	</build>
-
-	<repositories>
-		<repository>
-			<id>java-net-repo</id>
-			<url>https://maven.java.net/content/repositories/public/</url>
-		</repository>
-
-		<repository>
-			<id>spring-milestones</id>
-			<name>Spring Milestones</name>
-			<url>https://repo.spring.io/milestone</url>
-		</repository>
-	</repositories>
 </project>
